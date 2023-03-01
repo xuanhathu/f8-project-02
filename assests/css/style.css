@@ -5,6 +5,7 @@
 :root {
     --font-heading: Sen, sans-serif;
     --main-color: #ffb900;
+    --line-clamp: 1;
 }
 
 html {
@@ -23,9 +24,22 @@ body {
     max-width: calc(100% - 48px);
     margin: 0 auto;
 }
+
 a {
     text-decoration: none;
 }
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    --webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line2 {
+    --line-clamp: 2;
+}
+
 .btn {
     display: inline-block;
     min-width: 118px;
@@ -38,9 +52,30 @@ a {
     background: #171100;
     border-radius: 999px;
 }
+
 .btn:hover {
     opacity: 0.9;
 }
+
+.heading {
+    font-weight: 700;
+    /* or 117% */
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+
+    color: #171100;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
 /* Header */
 .header {
     background: #fffcf4;
@@ -189,17 +224,6 @@ a {
     padding: 64px 0 0 130px;
 }
 
-.content-block h1 {
-    font-weight: 700;
-    font-size: 5.8rem;
-    line-height: 1.17;
-    /* or 117% */
-    font-family: var(--font-heading);
-    letter-spacing: -0.02em;
-
-    color: #171100;
-}
-
 .content-block .desc {
     font-weight: 400;
     font-size: 1.8;
@@ -261,4 +285,136 @@ a {
 
 .content-block .aaa {
     margin-left: -28px;
+}
+
+/* Popular */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-top .desc {
+    margin-top: 16px;
+    max-width: 458px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    /* or 167% */
+    color: #5f5b53;
+}
+
+.controls {
+    display: flex;
+    gap: 18px;
+}
+
+.control-btn {
+    border: 1px solid var(--main-color);
+    background-color: transparent;
+    color: var(--main-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.popular .pop-list {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+
+.course-item {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #e2dfda;
+    border-radius: 12px;
+}
+
+.course-item:hover {
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    border: transparent;
+}
+
+.course-item .thumb {
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    margin-bottom: 16px;
+    height: 278px;
+    object-fit: cover;
+}
+
+.pop-list .info {
+    margin: 0 22px 22px 22px;
+}
+
+.pop-list .info .foot,
+.pop-list .info .head,
+.pop-list .info .rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pop-list .info .tittle {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+    margin-bottom: 6px;
+}
+
+.pop-list .info .head .value {
+    margin-left: 6px;
+    color: var(--main-color);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    /* identical to box height, or 175% */
+}
+
+.pop-list .info .desc {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    /* or 186% */
+
+    color: #5f5b53;
+}
+
+.pop-list .info .foot {
+    margin-top: 12px;
+}
+
+.pop-list .foot .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    /* identical to box height, or 167% */
+
+    color: #171100;
+}
+
+.book-btn {
+    border: none;
+}
+
+.book-btn:hover {
+    background-color: var(--main-color);
+    color: white;
 }
