@@ -1,0 +1,66 @@
+.feature {
+    margin: 75px 0;
+}
+
+.feature-item {
+    margin: 200px 0;
+}
+
+.layout {
+    display: flex;
+}
+.info {
+    width: 40%;
+}
+
+.bc1,
+.bc2 {
+    position: relative;
+}
+
+.bc1 {
+    top: -10px;
+}
+
+img.bc2 {
+    margin-right: 130px;
+}
+.bc1 {
+    top: 34px;
+}
+
+.info .heading {
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 1.26;
+    /* or 126% */
+
+    letter-spacing: -0.02em;
+
+    color: #171100;
+}
+
+.info .lesson,
+.info .desc {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    /* or 175% */
+
+    color: #5f5b53;
+}
+
+.info .desc {
+    margin-top: 16px;
+}
+
+.info .lesson {
+    margin-top: 16px;
+}
+
+.info .btn {
+    color: white;
+    background: #ffb900;
+    border: none;
+    width: 137px;
+}
